@@ -3,17 +3,18 @@
 function checkNumber(userNumber){
   var userInputSplit = userNumber.split("");
   var includesOne = userInputSplit.includes("1");
-  var includesTwo = userInputSplit.includes("0");
-console.log(includesOne);
-  // if (includesOne === true) {
-  //   alert("includes 1");
-  // } else if (includesTwo === true) {
-  //   alert("includes 0");
-  // } else {
-  //   alert("includes neither");
-  // }
+  var includesZero = userInputSplit.includes("0");
+  var finalNumber = [];
 
-  $("#result").text(userInputSplit);
+  if (includesZero === true && includesOne === false ) {
+    finalNumber.push('Beep!');
+  } else if (includesOne === true) {
+    finalNumber.push('Boop!');
+  } else {
+    finalNumber.push('NOT WORKING');
+  }
+console.log(finalNumber);
+  $("#result").text(finalNumber);
   $("#result").slideDown();
 
 }

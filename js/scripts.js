@@ -1,11 +1,10 @@
 // BUSINESS LOGIC
 
 function checkNumber(userNumber){
-  var userInputSplit = userNumber.split(" ");
+  var userInputSplit = userNumber.split("");
   var includesOne = userInputSplit.includes("1");
   var includesZero = userInputSplit.includes("0");
   var divisibleByThree = parseInt(userNumber) % 3 === 0
-  var finalNumber = [];
 
   if (divisibleByThree === true) {
     $("#result ul").append("<li>" + "I'm sorry, Dave. I'm afraid I can't do that." + "</li>");
@@ -21,15 +20,14 @@ function checkNumber(userNumber){
 
 function loopNumber(userNumber) {
 
-  var loopAmmount = parseInt(userNumber);
+  var loopAmmount = userNumber;
 
   $("#result ul").text(" ");
-  debugger;
+
 
  for (x = 1; x <= loopAmmount; x++) {
   var loopCurrentNumber = x;
-  var pushNumber = [];
-  pushNumber.push(loopCurrentNumber);
+  pushNumber = loopCurrentNumber.toString();
   checkNumber(pushNumber);
  }
 

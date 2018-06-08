@@ -48,9 +48,9 @@ function customName() {
 
 function showNameField() {
   var nameSelection = $("input:radio[name=customInputName]").val();
-debugger;
+
   if (nameSelection === "yes") {
-$(".form-name").slideDown();
+$(".form-name").slideToggle();
   } else {
 
   }
@@ -60,7 +60,9 @@ $(".form-name").slideDown();
 
 $(function(){
 
-  showNameField();
+  $('input:radio[name=customInputName]').change(function(){
+    showNameField();
+  });
 
   $("#beep-boop-form").submit(function(event) {
     event.preventDefault();

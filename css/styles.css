@@ -1,10 +1,11 @@
 body {
   background-image: url('../img/qbkls.png');
-  font-family: 'Sunflower', sans-serif;
+  font-family: 'VT323', monospace;
 }
 
 #header {
-  background-image: url('../img/what-the-hex-dark.png');
+  background-color:#f16139;
+  border: 3px dashed #e53725;
   text-align: center;
   color: white;
   padding: 10px;
@@ -15,22 +16,26 @@ body {
 #mainbox {
   background: white;
   padding: 20px;
+  border: 2px dashed #edc74d;
 }
 
 #resultArea {
-  background-image: url('../img/what-the-hex-dark.png');
-  color: white;
+  /* background-image: url('../img/what-the-hex-dark.png'); */
+  color: black;
   padding: 0px;
+  border: 3px dashed #e53725;
+  display:none;
 }
 
 #result {
-  display:none;
   padding: 20px;
-  border: 3px solid red;
+  width:90%;
+  max-width: 550px;
+  margin: 0 auto;
 }
 
 .name {
-  color: red;
+  color: #e53725;
   font-weight: 800;
 }
 
@@ -42,6 +47,18 @@ body {
 .form-name {
   display: none;
   margin-top: 20px;
+}
+
+.btn-ryan {
+    background-color: #a77bbf;
+    color: white;
+    border-color: #9365ab;
+}
+
+.btn-ryan:hover {
+    background-color: #9365ab;
+    color: white;
+    border-color: #8458a0;
 }
 
 .form-group {
@@ -80,24 +97,7 @@ ul {
     top: 50%;
   }
   50% {
-    top: 55%;
-  }
-  100% {
-    top: 50%;
-  }
-}
-
-.robot2 {
-  x-transition: all 1s ease-in-out;
-  animation: bni 1.7s infinite;
-}
-
-@keyframes bni {
-  0% {
-    top: 50%;
-  }
-  50% {
-    top: 70%;
+    top: 53%;
   }
   100% {
     top: 50%;

@@ -22,7 +22,7 @@ function loopNumber(userNumber) {
 
   }
 
- $("#result").slideDown();
+ $("#resultArea").slideDown();
 
 }
 

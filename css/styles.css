@@ -103,3 +103,9 @@ ul {
     top: 50%;
   }
 }
+
+@media (max-width: 930px) {
+  .robot1 {
+    display:none;
+  }
+}

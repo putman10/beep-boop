@@ -1,16 +1,16 @@
 // BUSINESS LOGIC
 
 function loopNumber(userNumber) {
-  var order = "reverse";
-
+  var order = $("#sortOrder").val();
+  console.log(order);
   $("#result ul").text(" ");
 
-  if (userNumber >= 0 && order === "notReverse") {
+  if (userNumber >= 0 && order === "1") {
    for (x = 0; x <= userNumber; x++) {
     var loopCurrentNumber = x.toString();
     checkNumber(loopCurrentNumber);
    }
- } else if (userNumber >= 0 && order === "reverse") {
+ } else if (userNumber >= 0 && order === "2") {
    for (x = userNumber; x >= 0; x--) {
     var loopCurrentNumber = x.toString();
     checkNumber(loopCurrentNumber);

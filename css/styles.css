@@ -14,6 +14,7 @@
 
 .form-name {
   display: none;
+  margin-top: 20px;
 }
 
 .form-group {
@@ -24,4 +25,9 @@
 ul {
   list-style: none;
   padding-left: 0px;
+}
+
+.topBox {
+  display: inline-block;
+  width: 49.5%;
 }

@@ -12,6 +12,7 @@
   <div class="container">
     <h1>Beep Boop Converter</h1>
     <form id="beep-boop-form">
+      <div class="topBox">
       <p>Would you like to customize the output with your name?</p>
       <div class="radio">
         <label>
@@ -25,6 +26,14 @@
           No
         </label>
       </div>
+     </div>
+      <div class="topBox">
+        <label for="sortOrder">Sort Order:</label>
+        <select class="form-control" id="sortOrder">
+          <option value="1">Forward</option>
+          <option value="2">Reverse</option>
+        </select>
+      </div>
       <div class="form-name">
         <input type="text" class="form-control" id="user-name" placeholder="Enter your name...">
         <small id="numberHelp" class="form-text text-muted">You don't have to enter your name BUT.. I will be forced to call you Dave if you don't!</small>
@@ -33,13 +42,6 @@
         <label for="user-input">Enter a number and receive a converted number back:</label>
         <input type="number" class="form-control" id="user-input" placeholder="Enter any number...">
         <small id="numberHelp" class="form-text text-muted">You'll be surprised with the outcome!</small>
-      </div>
-      <div class="form-group">
-        <label for="sortOrder">Sort Order:</label>
-        <select class="form-control" id="sortOrder">
-          <option value="1">Forward</option>
-          <option value="2">Reverse</option>
-        </select>
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
       <button type="btn" class="btn btn-primary" onClick="window.location.reload()">Reset</button>

@@ -1,5 +1,6 @@
 body {
   background-image: url('../img/qbkls.png');
+  font-family: 'Sunflower', sans-serif;
 }
 
 #header {
@@ -17,7 +18,7 @@ body {
 }
 
 #resultArea {
-  background: black;
+  background-image: url('../img/what-the-hex-dark.png');
   color: white;
   padding: 0px;
 }
@@ -25,7 +26,7 @@ body {
 #result {
   display:none;
   padding: 20px;
-  border: 3px solid blue;
+  border: 3px solid red;
 }
 
 .name {
@@ -56,4 +57,49 @@ ul {
 .topBox {
   display: inline-block;
   width: 49.5%;
+}
+
+#robot1 {
+    position: fixed;
+    top: 50%;
+    left: 2%;
+}
+#robot2 {
+    position: fixed;
+    top: 50%;
+    right: 2%;
+}
+
+.robot1 {
+  x-transition: all 1s ease-in-out;
+  animation: ani 1.7s infinite;
+}
+
+@keyframes ani {
+  0% {
+    top: 50%;
+  }
+  50% {
+    top: 55%;
+  }
+  100% {
+    top: 50%;
+  }
+}
+
+.robot2 {
+  x-transition: all 1s ease-in-out;
+  animation: bni 1.7s infinite;
+}
+
+@keyframes bni {
+  0% {
+    top: 50%;
+  }
+  50% {
+    top: 70%;
+  }
+  100% {
+    top: 50%;
+  }
 }

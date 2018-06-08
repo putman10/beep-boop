@@ -45,22 +45,26 @@ function checkNumber(userNumber){
 
 function customName(listNumber) {
   var userName = $("#user-name").val();
+  var nameSelection = $("input:radio[name=customInputName]:checked").val();
 
   $("#result ul").append("<li>" + listNumber + " = " + "I'm sorry, " + "<span class='name'></span>" + ". I'm afraid I can't do that." + "</li>");
 
-  if ($("#user-name").val()) {
+  if (nameSelection === "yes") {
     $("span.name").text(userName);
-  } else {
+  } else if (nameSelection === "no"){
     $("span.name").text("Dave");
+  } else {
+
   }
 }
 
 function showNameField() {
-  var nameSelection = $("input:radio[name=customInputName]").val();
+  var nameSelection = $("input:radio[name=customInputName]:checked").val();
 
   if (nameSelection === "yes") {
-  $(".form-name").slideToggle();
+  $(".form-name").slideDown();
   } else {
+    $(".form-name").slideUp();
   }
  }
 

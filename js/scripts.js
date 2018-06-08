@@ -4,14 +4,19 @@ function checkNumber(userNumber){
   var userInputSplit = userNumber.split("");
   var includesOne = userInputSplit.includes("1");
   var includesZero = userInputSplit.includes("0");
+  var divisibleByThree = parseInt(userNumber) % 3 === 0
   var finalNumber = [];
 
-  if (includesZero === true && includesOne === false ) {
+  console.log(divisibleByThree);
+
+  if (divisibleByThree === true) {
+    finalNumber.push("I'm sorry, Dave. I'm afraid I can't do that.");
+  } else if (includesZero === true && includesOne === false) {
     finalNumber.push('Beep!');
   } else if (includesOne === true) {
     finalNumber.push('Boop!');
   } else {
-    finalNumber.push('NOT WORKING');
+    finalNumber.push(parseInt(userNumber));
   }
 console.log(finalNumber);
   $("#result").text(finalNumber);

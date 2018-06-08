@@ -4,7 +4,7 @@ function loopNumber(userNumber) {
 
   $("#result ul").text(" ");
 
-  if (userNumber > 0) {
+  if (userNumber >= 0) {
    for (x = 0; x <= userNumber; x++) {
     var loopCurrentNumber = x.toString();
     checkNumber(loopCurrentNumber);

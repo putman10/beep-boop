@@ -1,3 +1,8 @@
 #result {
   display:none;
 }
+
+.name {
+  color: red;
+  font-weight: 800;
+}

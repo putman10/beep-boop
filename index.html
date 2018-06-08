@@ -13,6 +13,11 @@
     <h1>Beep Boop Converter</h1>
     <form id="beep-boop-form">
       <div class="form-group">
+        <label for="user-name">Enter your name to get a custom response:</label>
+        <input type="text" class="form-control" id="user-name" placeholder="Enter your name...">
+        <small id="numberHelp" class="form-text text-muted">You don't have to enter your name but who doesn't like a custom response!</small>
+      </div>
+      <div class="form-group">
         <label for="user-input">Enter a number and receive a converted number back:</label>
         <input type="number" class="form-control" id="user-input" placeholder="Enter any number...">
         <small id="numberHelp" class="form-text text-muted">You'll be surprised with the outcome!</small>
@@ -20,9 +25,9 @@
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
     <div id="result">
-      <ul>
+      <ol>
 
-      </ul>
+      </ol>
     </div>
    </div>
   </body>

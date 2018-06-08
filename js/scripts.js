@@ -1,22 +1,5 @@
 // BUSINESS LOGIC
 
-function checkNumber(userNumber){
-  var userInputSplit = userNumber.split("");
-  var includesOne = userInputSplit.includes("1");
-  var includesZero = userInputSplit.includes("0");
-  var divisibleByThree = parseInt(userNumber) % 3 === 0
-
-  if (divisibleByThree === true) {
-    $("#result ul").append("<li>" + "I'm sorry, Dave. I'm afraid I can't do that." + "</li>");
-  } else if (includesZero === true && includesOne === false) {
-    $("#result ul").append("<li>" + "Beep!" + "</li>");
-  } else if (includesOne === true) {
-    $("#result ul").append("<li>" + "Boop!" + "</li>");
-  } else {
-    $("#result ul").append("<li>" + parseInt(userNumber) + "</li>");
-  }
-}
-
 function loopNumber(userNumber) {
 
   var loopAmmount = userNumber;
@@ -24,12 +7,38 @@ function loopNumber(userNumber) {
   $("#result ul").text(" ");
 
 
- for (x = 1; x <= loopAmmount; x++) {
+ for (x = 0; x <= loopAmmount; x++) {
   var loopCurrentNumber = x.toString();
   checkNumber(loopCurrentNumber);
  }
 
  $("#result").slideDown();
+
+}
+
+function checkNumber(userNumber){
+  var userInputSplit = userNumber.split("");
+  var includesOne = userInputSplit.includes("1");
+  var includesZero = userInputSplit.includes("0");
+  var divisibleByThree = parseInt(userNumber) % 3 === 0
+
+  if (divisibleByThree === true) {
+    customName(userNumber);
+  } else if (includesZero === true && includesOne === false) {
+    $("#result ol").append("<li>" +  "Beep!" + "</li>");
+  } else if (includesOne === true) {
+    $("#result ol").append("<li>" +  "Boop!" + "</li>");
+  } else {
+    $("#result ol").append("<li>" + parseInt(userNumber) + "</li>");
+  }
+}
+
+function customName(userNumber) {
+  var userInput = $("#user-name").val();
+
+  $("#result ol").append("<li>" + "I'm sorry, " + "<span class='name'></span>" + ". I'm afraid I can't do that." + "</li>");
+
+  $("span.name").text(userInput);
 
 }
 

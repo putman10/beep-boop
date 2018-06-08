@@ -2,7 +2,7 @@
 
 function loopNumber(userNumber) {
   var order = $("#sortOrder").val();
-  console.log(order);
+
   $("#result ul").text(" ");
 
   if (userNumber >= 0 && order === "1") {
@@ -75,7 +75,7 @@ $(function(){
   $("#beep-boop-form").submit(function(event) {
     event.preventDefault();
     var userInput = $("#user-input").val();
-
     loopNumber(userInput);
   });
+
 });

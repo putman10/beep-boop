@@ -9,8 +9,10 @@
   <title>Beep Boop Converter</title>
 </head>
 <body>
-  <div class="container">
+  <div class="container" id="header">
     <h1>Beep Boop Converter</h1>
+  </div>
+  <div class="container" id="mainbox">
     <form id="beep-boop-form">
       <div class="topBox">
       <p>Would you like to customize the output with your name?</p>
@@ -39,18 +41,20 @@
         <small id="numberHelp" class="form-text text-muted">You don't have to enter your name BUT.. I will be forced to call you Dave if you don't!</small>
       </div>
       <div class="form-group">
-        <label for="user-input">Enter a number and receive a converted number back:</label>
+        <label for="user-input">Enter a number and receive a converted output back:</label>
         <input type="number" class="form-control" id="user-input" placeholder="Enter any number...">
         <small id="numberHelp" class="form-text text-muted">You'll be surprised with the outcome!</small>
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
       <button type="btn" class="btn btn-primary" onClick="window.location.reload()">Reset</button>
     </form>
-    <div id="result">
-      <ul>
+   </div>
+   <div class="container" id="resultArea">
+     <div id="result">
+       <ul>
 
-      </ul>
-    </div>
+       </ul>
+     </div>
    </div>
   </body>
 </html>

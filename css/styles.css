@@ -1,5 +1,31 @@
+body {
+  background-image: url('../img/qbkls.png');
+}
+
+#header {
+  background-image: url('../img/what-the-hex-dark.png');
+  text-align: center;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#mainbox {
+  background: white;
+  padding: 20px;
+}
+
+#resultArea {
+  background: black;
+  color: white;
+  padding: 0px;
+}
+
 #result {
   display:none;
+  padding: 20px;
+  border: 3px solid blue;
 }
 
 .name {

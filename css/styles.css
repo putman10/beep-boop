@@ -6,3 +6,17 @@
   color: red;
   font-weight: 800;
 }
+
+.radio {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.form-name {
+  display: none;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}

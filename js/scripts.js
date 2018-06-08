@@ -46,16 +46,26 @@ function customName() {
   }
 }
 
+function showNameField() {
+  var nameSelection = $("input:radio[name=customInputName]").val();
+debugger;
+  if (nameSelection === "yes") {
+$(".form-name").slideDown();
+  } else {
+
+  }
+ }
 
 // USER INTERFACE LOGIC
 
 $(function(){
+
+  showNameField();
 
   $("#beep-boop-form").submit(function(event) {
     event.preventDefault();
     var userInput = $("#user-input").val();
 
     loopNumber(userInput);
-
   });
 });

@@ -12,8 +12,20 @@
   <div class="container">
     <h1>Beep Boop Converter</h1>
     <form id="beep-boop-form">
-      <div class="form-group">
-        <label for="user-name">Enter your name to get a custom response:</label>
+      <p>Would you like to customize the output with your name?</p>
+      <div class="radio">
+        <label>
+          <input type="radio" name="customInputName" value="yes">
+          Yes
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="customInputName" value="no">
+          No
+        </label>
+      </div>
+      <div class="form-name">
         <input type="text" class="form-control" id="user-name" placeholder="Enter your name...">
         <small id="numberHelp" class="form-text text-muted">You don't have to enter your name but who doesn't like a custom response!</small>
       </div>

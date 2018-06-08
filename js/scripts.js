@@ -15,7 +15,6 @@ function checkNumber(userNumber){
   } else {
     $("#result ul").append("<li>" + parseInt(userNumber) + "</li>");
   }
-
 }
 
 function loopNumber(userNumber) {
@@ -26,9 +25,8 @@ function loopNumber(userNumber) {
 
 
  for (x = 1; x <= loopAmmount; x++) {
-  var loopCurrentNumber = x;
-  pushNumber = loopCurrentNumber.toString();
-  checkNumber(pushNumber);
+  var loopCurrentNumber = x.toString();
+  checkNumber(loopCurrentNumber);
  }
 
  $("#result").slideDown();
@@ -47,6 +45,4 @@ $(function(){
     loopNumber(userInput);
 
   });
-
-
 });

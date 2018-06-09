@@ -25,6 +25,7 @@ body {
   padding: 0px;
   border: 3px dashed #e53725;
   display:none;
+  background-color: rgba(228, 56, 38, 0.1);
 }
 
 #result {

@@ -1,7 +1,6 @@
 // BUSINESS LOGIC
 
-function loopNumber(userNumber) {
-  var order = $("#sortOrder").val();
+function loopNumber(userNumber, order) {
   var finalArray = [];
 
   if (userNumber >= 0 && order === "1") {
@@ -66,7 +65,8 @@ $(function(){
   $("#beep-boop-form").submit(function(event) {
     event.preventDefault();
     var userInput = $("#user-input").val();
-    var finalResult = loopNumber(userInput).join(" ");
+    var order = $("#sortOrder").val();
+    var finalResult = loopNumber(userInput, order).join(" ");
     var userName = $("#user-name").val();
     var nameSelection = $("input:radio[name=customInputName]:checked").val();
 

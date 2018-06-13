@@ -10,7 +10,7 @@ function loopNumber(userNumber) {
     var final = checkNumber(loopCurrentNumber);
     finalArray.push(x + " =" + final + "<br>");
    }
- } else if (userNumber >= 0 && order === "2") {
+  } else if (userNumber >= 0 && order === "2") {
    for (x = userNumber; x >= 0; x--) {
     var loopCurrentNumber = x.toString();
     var final = checkNumber(loopCurrentNumber);
@@ -60,7 +60,7 @@ $(function(){
    } else {
      $("span.name").text("Dave");
    }
-   
+
   });
 
   $("#beep-boop-form").submit(function(event) {
@@ -70,7 +70,7 @@ $(function(){
     var userName = $("#user-name").val();
     var nameSelection = $("input:radio[name=customInputName]:checked").val();
 
-    $("#resultArea").html(finalResult);
+    $("#result").html(finalResult);
 
     if (nameSelection === "yes" && userName === "") {
       $("span.name").text("Dave");

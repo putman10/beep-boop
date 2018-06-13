@@ -8,19 +8,19 @@ function loopNumber(userNumber) {
    for (x = 0; x <= userNumber; x++) {
     var loopCurrentNumber = x.toString();
     var final = checkNumber(loopCurrentNumber);
-    finalarray3.push(final);
-  
+    finalarray3.push(x + " =" + final + "<br>");
+    
    }
  } else if (userNumber >= 0 && order === "2") {
    for (x = userNumber; x >= 0; x--) {
     var loopCurrentNumber = x.toString();
     var final = checkNumber(loopCurrentNumber);
-    finalarray3.push(final);
+    finalarray3.push(x + " =" + final + "<br>");
    }
   } else if (userNumber < 0) {
- alert("Please enter a number greater than 0")
+    finalarray3.push("Please enter a number greater than 0");
   } else {
-    alert("this will work in a bit")
+    finalarray3.push("Try Again");
   }
   return finalarray3;
 }
@@ -82,8 +82,8 @@ $(function(){
   $("#beep-boop-form").submit(function(event) {
     event.preventDefault();
     var userInput = $("#user-input").val();
-    var finalFinal = loopNumber(userInput);
-    $("#resultArea").text(finalFinal);
+    var finalFinal = loopNumber(userInput).join(" ");
+    $("#resultArea").html(finalFinal);
     $("#resultArea").slideDown();
     debugger;
 

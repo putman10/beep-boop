@@ -8,13 +8,13 @@ function loopNumber(userNumber) {
    for (x = 0; x <= userNumber; x++) {
     var loopCurrentNumber = x.toString();
     var final = checkNumber(loopCurrentNumber);
-    finalArray.push(x + " =" + final + "<br>");
+    finalArray.push("<p>" + x + " =" + final + "</p>");
    }
   } else if (userNumber >= 0 && order === "2") {
    for (x = userNumber; x >= 0; x--) {
     var loopCurrentNumber = x.toString();
     var final = checkNumber(loopCurrentNumber);
-    finalArray.push(x + " =" + final + "<br>");
+    finalArray.push("<p>" + x + " =" + final + "</p>");
    }
   } else if (userNumber < 0) {
     finalArray.push("Please enter a number greater than 0");

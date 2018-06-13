@@ -37,6 +37,10 @@ body {
   margin: 0 auto;
 }
 
+#result p {
+  margin-bottom: 0px;
+}
+
 .name {
   color: #e53725;
   font-weight: 800;
